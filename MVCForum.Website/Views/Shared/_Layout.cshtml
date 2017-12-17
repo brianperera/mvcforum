@@ -31,12 +31,33 @@
     <![endif]-->
     <link rel="shortcut icon" href="@Url.Content(theme.ThemePath + "/content/images/favicon.ico")">
     <link rel="apple-touch-icon-precomposed" href="@Url.Content(theme.ThemePath + "/content/images/apple-touch-icon-57-precomposed.png")">
+    <link href="~/Themes/Metro/Content/Styles/Custom.css" rel="stylesheet" />
     @Html.Partial("_JavaScript", theme)
     @RenderSection("Header", false)
     @if (!string.IsNullOrEmpty(Html.Settings().CustomHeaderCode))
     {
         @Html.Raw(Html.Settings().CustomHeaderCode)
     }
+
+    @*Global site tag (gtag.js) - Google Analytics*@
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111351397-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111351397-1');
+    </script>
+
+    @*Google Ads*@
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-7547919030495736",
+        enable_page_level_ads: true
+      });
+    </script>
+
 </head>
 
 <body class="@TempData[AppConstants.GlobalClass].ToString() loggedin-@(User.Identity.IsAuthenticated.ToString().ToLower())">
@@ -72,8 +93,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="@Url.Action("Index", "Home")">
-                        <img src="@Url.Content(theme.ThemePath + "/content/images/logo.png")" alt="@Html.Lang("Site.MvcForum")" class="logoimg"/>                        
+                    <a class="navbar-brand logo-with-text" href="@Url.Action("Index", "Home")">
+                        <img src="@Url.Content(theme.ThemePath + "/content/images/logo-icon.png")" alt="@Html.Lang("Site.MvcForum")" class="logoimg" />
+                        <span><strong>IFS  </strong>Community</span>
                     </a>
                 </div>
 
@@ -130,12 +152,12 @@
             @RenderSection("Footer", false)
 
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-12">
                     @Html.Action("GetMainStats", "Stats")
                 </div>
-                <div class="col-sm-6">
+                @*<div class="col-sm-6">
                     @Html.Action("GetCurrentActiveMembers", "Members")
-                </div>
+                </div>*@
             </div>
 
             <div class="row">

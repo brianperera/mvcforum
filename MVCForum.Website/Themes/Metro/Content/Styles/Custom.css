@@ -1,0 +1,53 @@
+﻿.color-purple, .color-purple:visited {
+  background-color: #873e8d !important;
+}
+
+.color-purple:hover, .color-purple:focus, .color-purple:active, .color-purple:visited:hover, .color-purple:visited:focus, .color-purple:visited:active {
+  background-color: #c55ace !important;
+}
+
+.logo-with-text {
+    color:#ffffff !important;
+    font-weight: normal !important;
+    font-size: 25px !important;
+}
+
+.logo-with-text img {
+    display:inline-block !important;
+    vertical-align: middle;
+}
+
+.logo-with-text span {
+    vertical-align: middle;
+}
+
+section.content-strip ul li a:hover, section.content-strip ul li a:focus, section.content-strip ul li a.active, section.content-strip ul li a:visited:hover, section.content-strip ul li a:visited:focus, section.content-strip ul li a:visited.active {
+    background-color: #fff !important;
+    border-color: #eb638d !important;
+}
+
+.navbar-default {
+    background-color:#873e8d !important;
+}
+
+.dropdown-toggle {
+    height:45px;
+}
+
+.dropdown-toggle:hover, .dropdown-toggle:focus, .dropdown-toggle:active, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:visited, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    background-color: #c03762 !important;
+}
+
+.btn-mvc-green {
+    background-color: #873e8d !important;
+}
+
+.btn-mvc-green:hover {
+    background-color: #c03762 !important;
+}
+
+footer {
+    background-color:transparent !important;
+    border-top: 2px solid #c03762;
+}
+

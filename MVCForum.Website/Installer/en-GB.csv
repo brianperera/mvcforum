@@ -4,7 +4,7 @@ Layout.Nav.Activity,Activity
 Layout.Nav.Leaderboard,Leaderboard
 Layout.Nav.Home,Home
 Layout.Nav.Admin,Admin
-Layout.CreateButton,New Discussion
+Layout.CreateButton,New Question
 Layout.PoweredBy,Powered by 
 Topic.Votes,Votes
 Topic.Comments,Answers
@@ -30,16 +30,16 @@ Post.ReplyingTo,Replying To:
 LogOn.LogOn,Log On
 LogOn.LogOff,Log Off
 Post.PleaseWait,Please Wait...
-Topic.DiscussionTaggedWith,Discussions Tagged With: 
-Topic.TitleFallBack,Discussion Topic
+Topic.DiscussionTaggedWith,Questions Tagged With: 
+Topic.TitleFallBack,Question Topic
 Topic.Subscribe,Follow
 Topic.UnSubscribe,UnFollow
 Topic.IsLocked,Topic Is Locked
-Topic.CreateDiscussion,Create Discussion
+Topic.CreateDiscussion,Create Question
 Topic.TagThisTopic,Tag this topic
 Topic.Choose,Choose Existing Topic
 Tags.PopularTags,Popular Tags
-Stats.FooterMainStatText,Our {0} members have posted {1} times in {2} discussions
+Stats.FooterMainStatText,Our {0} members have posted {1} times in {2} questions
 Stats.LatestMembers,Latest Members:
 PM.Title,Message: 
 PM.From,From: 
@@ -84,7 +84,7 @@ Members.Profile.Location,Location:
 Members.Profile.Website,Website
 Members.Profile.Twitter,Twitter
 Members.Profile.Facebook,Facebook:
-Members.Profile.DiscussionActivity,Discussion Activity
+Members.Profile.DiscussionActivity,Question Activity
 Ajax.PleaseWait,Please Wait...
 Members.Profile.Badges,Badges
 Members.EditProfile,Edit Profile
@@ -94,12 +94,12 @@ Members.EditMember,Edit Member
 Leaderboard.ThisWeeksStars,This Weeks Stars
 Leaderboard.ThisYearsStars,This Years Rock Stars
 Leaderboard.LeaderboardTitle,Global Leaderboard
-Home.LatestDiscussions,Latest Discussions
+Home.LatestDiscussions,Latest Questions
 Home.Rss,Rss
 Activity.ActivityTitle,Activity
 Notification.Subscribe,Follow
 Notification.UnSubscribe,UnFollow
-Category.NoDiscussions,Currently no discussions in this category
+Category.NoDiscussions,Currently no questions in this category
 Category.CategoriesSideHeading,Categories
 PM.RecipientUsername,Recipient Username
 PM.MessageSubject,Subject
@@ -127,7 +127,7 @@ Errors.NoAccess,No Access
 Errors.GenericMessage,Sorry an error occured
 Errors.NoPermission,You do not have permission to perform this action
 Topic.Notification.NewTopics,A new topic or tag has been created in the {0} category
-Topic.Notification.Subject,New Discussion On 
+Topic.Notification.Subject,New Question On 
 PM.SendingToQuickly,You are trying to send messages to quickly
 PM.SentItemsOverCapcity,Your sent items is over capacity - delete messages to be able to send
 PM.ReceivedItemsOverCapcity,{0} has exceeded their inbox size - unable to send message
@@ -151,11 +151,11 @@ Members.Errors.LogonGeneric,Unable to login.
 Members.NowLoggedOut,You are now logged out
 Member.ProfileUpdated,Profile Updated
 Language.Changed,Language Changed
-Rss.LatestActivity.Title,Latest Forum Discussions
-Rss.LatestActivity.Description,Recent discussions
+Rss.LatestActivity.Title,Latest Forum Questions
+Rss.LatestActivity.Description,Recent questions
 Errors.NothingToDisplay,Nothing To Display
-Rss.Category.Title,{0} Discussions
-Rss.Category.Description,Latest discussions happening in the {0} category
+Rss.Category.Title,{0} Questions
+Rss.Category.Description,Latest questions happening in the {0} category
 Report.Reporter,Reporter
 Report.MemberReported,Member Reported
 Report.Reason,Reason
