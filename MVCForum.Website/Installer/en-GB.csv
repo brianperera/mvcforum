@@ -6,6 +6,7 @@ Layout.Nav.Home,Home
 Layout.Nav.Admin,Admin
 Layout.CreateButton,New Question
 Layout.PoweredBy,Powered by 
+Layout.FooterNote,This forum is maintained by IFS Community users and do not have connections with any IFS subsidiaries.
 Topic.Votes,Votes
 Topic.Comments,Answers
 Topic.StartedBy,Started {0} by {1}
