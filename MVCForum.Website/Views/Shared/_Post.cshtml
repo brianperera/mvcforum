@@ -25,6 +25,21 @@
                 @Html.Lang("Post.MemberIsOnline")
             </span>
         }
+        @if (Html.Settings().EnableMarkAsSolution)
+        {
+            if (Model.ParentTopic.Solved && Model.Post.IsSolution)
+            {
+                <span class="glyphicon glyphicon-ok green-colour fa-2x" aria-hidden="true"></span>
+            }
+            else if (!Model.ParentTopic.Solved && !Model.Post.IsTopicStarter && Html.CurrentMember() != null && (Model.ParentTopic.User.Id == loggedOnUserId || User.IsInRole(AppConstants.AdminRoleName)))
+            {
+                <span title="@Html.LanguageString("Post.IsSolution")">
+                    <a class="solutionlink" data-id="@postId">
+                        <span class="glyphicon glyphicon-ok fa-2x" aria-hidden="true" style="color:lightgray; margin-top: 5px;"></span>
+                    </a>
+                </span>
+            }
+        }
     </div>
 
     <div class="rowdetails clearfix">
@@ -177,7 +192,7 @@
                             }
                         </li>
 
-                        @if (Html.Settings().EnableMarkAsSolution)
+                        @*@if (Html.Settings().EnableMarkAsSolution)
                         {
                             if (Model.ParentTopic.Solved && Model.Post.IsSolution)
                             {
@@ -194,7 +209,7 @@
                                     </a>
                                 </li>
                             }
-                        }
+                        }*@
 
                         @if (Html.CurrentMember() != null && Model.Post.User.Id != loggedOnUserId && !Model.Post.IsTopicStarter)
                         {
