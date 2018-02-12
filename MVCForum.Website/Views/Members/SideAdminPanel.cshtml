@@ -54,9 +54,14 @@ else
                 }
             </a>
         </li>
+        <li>
+            <a href="@Url.Action("All", "PrivateMessage")">
+                @Html.LanguageString("PM.AllPrivateMessages")
+            </a>
+        </li>
 }
-    if (Model.ModerateCount > 0)
-    {
+if (Model.ModerateCount > 0)
+{
         <li>
             <a href="@Url.Action("Index", "Moderate")" class="moderatepanelnav" data-name="@Html.Lang("Moderate.NavText")">
                 @Html.LanguageString("Moderate.NavText")

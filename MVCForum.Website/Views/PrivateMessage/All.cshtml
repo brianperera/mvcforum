@@ -1,0 +1,39 @@
+﻿@model MVCForum.Website.ViewModels.ViewAllPrivateMessagesViewModel
+@{
+    Layout = "~/Views/Shared/_LayoutFullWidth.cshtml";
+    ViewBag.Title = Html.LanguageString("PM.AllMessage");
+}
+
+<div class="pmview">
+    <div class="row">
+
+        <div class="col-md-12">   
+            <table class="table">
+
+                @if (Model.PrivateMessages.Count > 0)
+                {
+                    <thead>
+                        <tr>
+                            <th>DateSent</th> 
+                            <th>Message</th> 
+                            <th>From</th> 
+                            <th>To</th> 
+                        </tr>
+                    </thead>
+                    foreach (var message in Model.PrivateMessages)
+                    {
+                        <tr>
+                            <td>@message.DateSent.ToString()</td>
+                            <td>@message.Message</td>
+                            <td>@message.UserFrom.UserName</td>
+                            <td>@message.UserTo.UserName</td>
+                        </tr>
+                    }
+                }
+            </table>
+        </div>
+    </div>
+    @*<input type="hidden" id="pageIndex" value="@(Model.PrivateMessages.PageIndex + 1)" />
+    <input type="hidden" id="userId" value="@Model.From.Id" />
+    <input type="hidden" id="totalPages" value="@Model.PrivateMessages.TotalPages" />*@
+</div>

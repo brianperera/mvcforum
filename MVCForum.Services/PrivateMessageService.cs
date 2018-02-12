@@ -246,5 +246,23 @@
             _context.PrivateMessage.Remove(message);
         }
 
+        public IPagedList<PrivateMessage> GetAllPrivateMessages(int pageIndex, int pageSize)
+        {
+            var query = _context.PrivateMessage
+               .AsNoTracking()
+               .Include(x => x.UserFrom)
+               .Include(x => x.UserTo)
+               .OrderByDescending(x => x.DateSent);
+
+            var total = query.Count();
+
+            var results = query
+                            .Skip((pageIndex - 1) * pageSize)
+                            .Take(pageSize)
+                            .ToList();
+
+            // Return a paged list
+            return new PagedList<PrivateMessage>(results, pageIndex, pageSize, total);
+        }
     }
 }

@@ -304,6 +304,31 @@
             }
         }
 
+        public ActionResult All()
+        {
+            using (var unitOfWork = UnitOfWorkManager.NewUnitOfWork())
+            {
+                var loggedOnUser = MembershipService.GetUser(LoggedOnReadOnlyUser.Id);
+                if (LoggedOnReadOnlyUser.Roles.Any(x => x.RoleName.Contains(AppConstants.AdminRoleName)))
+                {
+                    var allMessages = _privateMessageService.GetAllPrivateMessages(1, SiteConstants.Instance.PagingGroupSize);
+
+                    var viewModel = new ViewAllPrivateMessagesViewModel
+                    {
+                        PrivateMessages = allMessages
+                    };
+
+                    return View(viewModel);
+                }
+                var noPermissionText = LocalizationService.GetResourceString("Errors.NoPermission");
+                if (Request.IsAjaxRequest())
+                {
+                    return Content(noPermissionText);
+                }
+                return ErrorToHomePage(noPermissionText);
+            }
+        }
+
         [HttpPost]
         public ActionResult Delete(DeletePrivateMessageViewModel deletePrivateMessageViewModel)
         {

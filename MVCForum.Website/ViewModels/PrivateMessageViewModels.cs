@@ -50,5 +50,9 @@ namespace MVCForum.Website.ViewModels
         public int PageIndex { get; set; }
     }
 
+    public class ViewAllPrivateMessagesViewModel
+    {
+        public IPagedList<PrivateMessage> PrivateMessages { get; set; }
+    }
 
 }

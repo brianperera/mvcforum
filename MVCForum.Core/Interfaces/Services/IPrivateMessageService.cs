@@ -24,5 +24,6 @@ namespace MVCForum.Domain.Interfaces.Services
         IList<PrivateMessage> GetAllReceivedByUser(Guid id);
         IList<PrivateMessage> GetAllByUserToAnotherUser(Guid senderId, Guid receiverId);
         void DeleteMessage(PrivateMessage message);
+        IPagedList<PrivateMessage> GetAllPrivateMessages(int pageIndex, int pageSize);
     }
 }
