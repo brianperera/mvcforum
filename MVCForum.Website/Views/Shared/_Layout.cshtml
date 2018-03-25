@@ -152,12 +152,16 @@
             @RenderSection("Footer", false)
 
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-6">
                     @Html.Action("GetMainStats", "Stats")
                 </div>
                 @*<div class="col-sm-6">
-                    @Html.Action("GetCurrentActiveMembers", "Members")
-                </div>*@
+            @Html.Action("GetCurrentActiveMembers", "Members")
+        </div>*@
+                <div class="col-sm-6">
+                    <a href="https://www.facebook.com/IFSHelpDesk/" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com/ifshelpdesk" class="fa fa-twitter"></a>
+                </div>
             </div>
 
             <div class="row">

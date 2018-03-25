@@ -651,6 +651,7 @@
     <Content Include="Content\bootstrap\js\npm.js" />
     <Content Include="Content\cache\Cache.txt" />
     <Content Include="Content\Emails\EmailNotification.htm" />
+    <Content Include="Content\IFSForum\css\social-media-buttons.css" />
     <Content Include="Content\Images\ajaxloader-large.gif" />
     <Content Include="Content\Images\ajaxloader.gif" />
     <Content Include="Content\Images\arrow-spinner-blue.gif" />
