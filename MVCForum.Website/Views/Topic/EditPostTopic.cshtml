@@ -8,10 +8,10 @@
 {
     @(
  Bundle.JavaScript()
-            .Add("~/Scripts/jquery.tagsinput.min.js")
-            .Add("~/Scripts/tags.js")
-            .Add("~/Scripts/createtopic.js")
-            .MvcRender("~/scripts/cache/topic-combined_#.js")
+            .Add("~/Scripts/jquery.tagsinput.min.js?v1")
+            .Add("~/Scripts/tags.js?v1")
+            .Add("~/Scripts/createtopic.js?v1")
+            .MvcRender("~/scripts/cache/topic-combined_#.js?v1")
     )
     <script type="text/javascript">
         counter = @(Model.PollAnswers != null ? Model.PollAnswers.Count : 0);
